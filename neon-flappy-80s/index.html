@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+  <meta name="description" content="NEON FLAPPY 80s — Jogo Arcade Synthwave Completo de Navegador em Canvas HTML5 e Web Audio puro.">
+  <meta name="theme-color" content="#050014">
+  <title>NEON FLAPPY 80s — Arcade Edition</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Arcade Cabinet Machine Frame -->
+  <main id="arcade-container">
+    <div class="arcade-bezel">
+      
+      <!-- Top Arcade Marquee -->
+      <header class="cabinet-marquee">
+        <div class="marquee-left">
+          <span class="neon-dot"></span>
+          <span>NEON FLAPPY 80s</span>
+        </div>
+        <button id="sound-btn" class="sound-toggle-btn" aria-label="Alternar Áudio" title="Ligar/Desligar Áudio">
+          AUDIO: ON
+        </button>
+      </header>
+
+      <!-- Main CRT Arcade Screen Wrapper -->
+      <section class="screen-wrapper" id="screen-container">
+        <!-- Render Canvas -->
+        <canvas id="game-canvas" width="480" height="720" aria-label="Tela do Jogo Neon Flappy 80s" role="img"></canvas>
+        
+        <!-- Retro CRT Scanline & Phosphor Filter -->
+        <div class="crt-overlay" aria-hidden="true"></div>
+      </section>
+
+      <!-- Bottom Arcade Instructions Strip -->
+      <footer class="cabinet-footer">
+        <span><span class="footer-key">[SPACE]</span> / <span class="footer-key">[CLICK]</span> VOAR</span>
+        <span><span class="footer-key">[ENTER]</span> REINICIAR</span>
+        <span>TOUCH DISPONÍVEL</span>
+      </footer>
+
+    </div>
+  </main>
+
+  <!-- Game Logic Script -->
+  <script src="game.js"></script>
+</body>
+</html>
